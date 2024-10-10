@@ -1,0 +1,11 @@
+This package provides only the Go runtime for ANTLR4.
+
+ANTLR4 itself and runtimes for other languages are packaged in seperate sources.
+See https://lists.debian.org/debian-java/2021/07/msg00014.html for the reasoning
+behind this.
+
+To keep packaging simple, any files other than the Go module
+github.com/antlr/antlr4/runtime/Go/antlr itself and LICENSE, README and
+contributors files are filtered out of the upstream tarball.
+
+See debian/gbp.conf for a detailed list of files excluded.
