@@ -1,4 +1,9 @@
 #!/usr/bin/make -f
 
+#export DH_VERBOSE := 1
+export DH_GOLANG_BUILDPKG := github.com/antlr/antlr4/runtime/Go/antlr
+export DH_GOLANG_EXCLUDES := Cpp Python3
+export DH_GOLANG_EXCLUDES_ALL := 1
+
 %:
-	dh $@
+	dh $@ --builddirectory=_build --buildsystem=golang --with=golang
